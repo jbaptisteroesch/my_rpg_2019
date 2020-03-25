@@ -7,7 +7,7 @@
 
 #include "../include/my.h"
 
-create_button_t create_button(create_button_t button, char *button_name,
+button_t create_button(button_t button, char *button_name,
                                                     float pos_x, float pos_y)
 {
     button.texture = sfTexture_createFromFile(button_name, NULL);

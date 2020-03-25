@@ -32,6 +32,10 @@
 #include <stdbool.h>
 #include <math.h>
 #include "window.h"
+#include "ui.h"
+#include "elements.h"
+#include "rpg.h"
+#include "menu_enum.h"
 #include "game.h"
 
 int my_getnbr(char const *nbr);

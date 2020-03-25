@@ -12,7 +12,7 @@ window_t *create_window(window_t *window, char *title)
     sfVideoMode mode = {1920, 1080, 32};
     window->video_mode = mode;
     window->texture = sfTexture_createFromFile(
-                                    "png/background_img/BGMainMenu.png", NULL);
+                            "media/background/rpg_background.png", NULL);
     window->sprite = sfSprite_create();
     window->window = sfRenderWindow_create(window->video_mode,
                                             title,
