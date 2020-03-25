@@ -37,6 +37,7 @@
 #include "rpg.h"
 #include "menu_enum.h"
 #include "game.h"
+#include "enum_in_game.h"
 
 int my_getnbr(char const *nbr);
 int my_isneg(int n);

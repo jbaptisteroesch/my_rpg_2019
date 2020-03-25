@@ -14,9 +14,12 @@ SRC		=		src/main.c	\
 				src/main_menu/main_menu.c	\
 				src/main_menu/events_main_menu.c	\
 				src/main_menu/draw_main_menu.c	\
-				src/in_game/pause_menu/pause_menu.c	\
 				src/settings_menu/settings_menu.c	\
 				src/in_game/in_game/in_game.c	\
+				src/in_game/pause_menu/pause_menu.c	\
+				src/in_game/in_game/events_in_game.c	\
+				src/in_game/in_game/draw_in_game.c	\
+				src/in_game/in_game/init_in_game/init_ui_in_game.c	\
 				
 
 NAME	=		my_rpg

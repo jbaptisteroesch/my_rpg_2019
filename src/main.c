@@ -35,7 +35,7 @@ int init_game_state_tab(game_t *game)
 
     if (!(game->game_state = malloc(sizeof(int) * 5)))
         return (1);
-    while (init_tab < 5) {
+    while (init_tab < 4) {
         game->game_state[init_tab] = 0;
         ++init_tab;
     }
