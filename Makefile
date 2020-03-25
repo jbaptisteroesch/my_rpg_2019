@@ -12,6 +12,8 @@ SRC		=		src/main.c	\
 				src/create_element.c	\
 				src/leave_state_if_error.c	\
 				src/main_menu/main_menu.c	\
+				src/main_menu/events_main_menu.c	\
+				src/main_menu/draw_main_menu.c	\
 				src/in_game/pause_menu/pause_menu.c	\
 				src/settings_menu/settings_menu.c	\
 				src/in_game/in_game/in_game.c	\

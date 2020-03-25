@@ -18,11 +18,11 @@ int init_game_menu(game_t *game)
 
 int main_menu(game_t *game)
 {
-    if (!(init_game_menu(game)))
+    if (init_game_menu(game))
         change_state_cause_of_error(game);
     while (game->game_state[MAIN_MENU] == 1) {
-        // draw_main_menu(game);
-        // events_main_menu(game);
+        draw_main_menu(game);
+        events_main_menu(game);
         sfRenderWindow_display(game->window->window);
     }
     //destroy_main_menu_elements(game);

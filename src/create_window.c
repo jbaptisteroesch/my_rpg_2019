@@ -16,7 +16,7 @@ window_t *create_window(window_t *window, char *title)
     window->sprite = sfSprite_create();
     window->window = sfRenderWindow_create(window->video_mode,
                                             title,
-                                            sfFullscreen,
+                                            sfDefaultStyle,
                                             NULL);
     sfRenderWindow_setFramerateLimit(window->window, 60);
     sfSprite_setTexture(window->sprite, window->texture, sfTrue);
