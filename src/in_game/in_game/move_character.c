@@ -13,7 +13,7 @@ int move_character(game_t *game, int x, int y)
     position.x = x;
     position.y = y;
 
-    // ! JUSTE A AJOUTER LE SPRITE DU JOUEUR AU MILIEU ET CA MARCHERA : -) sfSprite_move( JOUEUR, position);
+    sfSprite_move(game->character.sprite, position);
     return (0);
 }
 
@@ -42,14 +42,15 @@ int move_map_next(game_t *game, int movement)
     sfVector2f movements;
     sfVector2f position =
     sfSprite_getPosition(game->game_scenes[0].ui_scene[MAP].sprite);
+    sfVector2f chara = sfSprite_getPosition(game->character.sprite);
 
-    if (movement == RIGHT && position.x < 2300) {
+    if (movement == RIGHT && position.x < 2300 && chara.x > 300) {
         movements.x = -3;
         movements.y = 0;
         sfSprite_move(game->game_scenes[0].ui_scene[MAP].sprite, movements);
         return (1);
     }
-    else if (movement == LEFT && position.x < 0) {
+    else if (movement == LEFT && position.x <= 0 && chara.x < 2300) {
         movements.x = 3;
         movements.y = 0;
         sfSprite_move(game->game_scenes[0].ui_scene[MAP].sprite, movements);
@@ -63,19 +64,20 @@ int move_map(game_t *game, int movement)
     sfVector2f movements;
     sfVector2f position =
     sfSprite_getPosition(game->game_scenes[0].ui_scene[MAP].sprite);
+    sfVector2f chara = sfSprite_getPosition(game->character.sprite);
 
-    if (movement == UP && position.y < 0) {
+    if (movement == UP && position.y < 0 && chara.y < 2000) {
         movements.x = 0;
         movements.y = 3;
         sfSprite_move(game->game_scenes[0].ui_scene[MAP].sprite, movements);
         return (1);
     }
-    else if (movement == DOWN && position.y < 2300) {
+    else if (movement == DOWN && position.y < 2300 && chara.y > 300) {
         movements.x = 0;
         movements.y = -3;
         sfSprite_move(game->game_scenes[0].ui_scene[MAP].sprite, movements);
         return (1);
-    } else
+    } else {
         return (move_map_next(game, movement));
-    return (0);
+    }
 }

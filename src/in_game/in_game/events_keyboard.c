@@ -31,10 +31,14 @@ int events_keyboard(game_t *game)
         if (sfKeyboard_isKeyPressed(sfKeyRight) == sfTrue) {
             moved = move_map(game, RIGHT);
             pos = RIGHT;
+            if (moved == 0)
+                move_character_cond(game, pos);
         }
         else if (sfKeyboard_isKeyPressed(sfKeyLeft) == sfTrue) {
             moved = move_map(game, LEFT);
             pos = LEFT;
+            if (moved == 0)
+                move_character_cond(game, pos);
         }
         else
             events_keyboard_next(game, moved, pos);

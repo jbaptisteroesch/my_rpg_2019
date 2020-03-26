@@ -20,7 +20,13 @@ int init_ui_scene_0_in_game(game_t *game)
 {
     if (!(game->game_scenes[0].ui_scene = malloc(sizeof(elem_t) * 1)))
         return (1);
-    // TODO POUR Flo : Insérer le nom de la map ici !! 
+    //? TEST AVEC CHARA
+    game->character = create_element(game->character, "media/chara.png", 500, 500);
+    sfVector2f scale;
+    scale.x = 0.2;
+    scale.y = 0.2;
+    sfSprite_setScale(game->character.sprite, scale);
+    // ?
     game->game_scenes[0].ui_scene[MAP] = create_element(
         game->game_scenes[0].ui_scene[MAP], "media/background/map_rpg.png",
                                                                 0, 0);

@@ -41,6 +41,8 @@ typedef struct game_s
     sfVector2i mouse_position;
     bool game_is_up;
     int *game_state;
+    //? JUSTE POSER ICI POUR LE TEST
+    elem_t character;
 } game_t;
 
 #endif /* !GAME_H_ */

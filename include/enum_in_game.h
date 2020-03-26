@@ -13,6 +13,7 @@ enum ui_in_game {
 };
 
 enum movements {
+    NOTHING,
     LEFT,
     UP,
     RIGHT,
