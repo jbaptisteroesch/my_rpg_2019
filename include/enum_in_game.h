@@ -12,4 +12,11 @@ enum ui_in_game {
     MAP
 };
 
+enum movements {
+    LEFT,
+    UP,
+    RIGHT,
+    DOWN,
+};
+
 #endif /* !ENUM_IN_GAME_H_ */

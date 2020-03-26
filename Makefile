@@ -20,7 +20,9 @@ SRC		=		src/main.c	\
 				src/in_game/in_game/events_in_game.c	\
 				src/in_game/in_game/draw_in_game.c	\
 				src/in_game/in_game/init_in_game/init_ui_in_game.c	\
-				
+				src/in_game/in_game/events_keyboard.c	\
+				src/in_game/in_game/move_character.c	\
+
 
 NAME	=		my_rpg
 
