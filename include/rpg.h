@@ -33,6 +33,10 @@ void draw_main_menu(game_t *game);
 int events_main_menu(game_t *game);
 void destroy_main_menu(game_t *game);
 
+// ? Init UI main menu
+
+
+
 // ? In game functions
 
 int init_in_game(game_t *game);
