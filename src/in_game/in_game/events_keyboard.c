@@ -20,6 +20,7 @@ int events_keyboard_next(game_t *game, int moved, int pos)
     if (moved == 0) {
         move_character_cond(game, pos);
     }
+    return (0);
 }
 
 int events_keyboard(game_t *game)

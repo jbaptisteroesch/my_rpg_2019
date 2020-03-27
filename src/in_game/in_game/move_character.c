@@ -80,4 +80,5 @@ int move_map(game_t *game, int movement)
     } else {
         return (move_map_next(game, movement));
     }
+    return (0);
 }
