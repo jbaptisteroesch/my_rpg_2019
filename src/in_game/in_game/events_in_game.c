@@ -16,6 +16,7 @@ int events_in_game(game_t *game)
             game->game_state[GAME] = 0;
             game->game_is_up = 0;
         }
+        events_keyboard(game);
     }
     return (1);
 }

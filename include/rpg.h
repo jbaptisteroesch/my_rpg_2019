@@ -50,6 +50,16 @@ void destroy_in_game(game_t *game);
 
 int init_ui_scene_0_in_game(game_t *game);
 
+// ? MOVE CHARACTER OR MAP
 
+int move_character_cond(game_t *game, int pos);
+int move_character(game_t *game, int x, int y);
+int move_map_next(game_t *game, int movement);
+int move_map(game_t *game, int movement);
+
+//? EVENT KEYBOARD
+
+int events_keyboard(game_t *game);
+int events_keyboard_next(game_t *game, int moved, int pos);
 
 #endif /* !RPG_H_ */

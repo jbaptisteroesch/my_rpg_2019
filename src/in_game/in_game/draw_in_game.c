@@ -11,5 +11,8 @@ void draw_in_game(game_t *game)
 {
     sfRenderWindow_drawSprite(game->window->window,
                             game->game_scenes[0].ui_scene[MAP].sprite, NULL);
+        sfRenderWindow_drawSprite(game->window->window,
+                            game->character.sprite, NULL);
+
     return;
 }
