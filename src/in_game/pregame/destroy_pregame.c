@@ -5,7 +5,7 @@
 ** destroy pregame
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 void destroy_pregame(game_t *game)
 {

@@ -5,7 +5,7 @@
 ** init tavern
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_tavern(game_t *game)
 {

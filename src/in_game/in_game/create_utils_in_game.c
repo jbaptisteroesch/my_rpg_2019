@@ -5,7 +5,7 @@
 ** create utils
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int create_utils_in_game(game_t *game)
 {

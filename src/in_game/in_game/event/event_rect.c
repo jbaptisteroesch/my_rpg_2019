@@ -5,7 +5,7 @@
 ** event_move
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 void is_player_walking(game_t *game)
 {

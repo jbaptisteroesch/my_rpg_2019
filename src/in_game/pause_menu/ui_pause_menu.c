@@ -5,7 +5,7 @@
 ** pause menu
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int blk_pm(game_t *game)
 {

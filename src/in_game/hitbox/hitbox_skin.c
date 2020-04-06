@@ -5,7 +5,7 @@
 ** hitbox_skin
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int hitbox_select_skin(game_t *ga)
 {

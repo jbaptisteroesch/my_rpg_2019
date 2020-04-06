@@ -5,7 +5,7 @@
 ** cave pnj
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_cave_pnj(game_t *game)
 {

@@ -5,7 +5,7 @@
 ** create music
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 int create_music(game_t *game)
 {

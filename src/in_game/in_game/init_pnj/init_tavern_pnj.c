@@ -5,7 +5,7 @@
 ** tavern pnj
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_tavern_pnj(game_t *game)
 {

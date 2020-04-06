@@ -5,7 +5,7 @@
 ** destroy mm
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 void destroy_main_menu_elements(game_t *game)
 {

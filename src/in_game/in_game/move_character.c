@@ -5,7 +5,7 @@
 ** events main menu
 */
 
-#include "../../../include/my.h"
+#include "my.h"
 
 int move_character(game_t *game, int x, int y)
 {

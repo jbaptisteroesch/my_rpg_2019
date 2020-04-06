@@ -5,7 +5,7 @@
 ** create window
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 window_t *create_window(window_t *window, char *title)
 {

@@ -5,7 +5,7 @@
 ** pause menu
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int do_pm_actions(game_t *game, int i, int wich_one)
 {

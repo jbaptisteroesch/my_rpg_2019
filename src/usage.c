@@ -5,7 +5,7 @@
 ** usage
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 void usage(void)
 {

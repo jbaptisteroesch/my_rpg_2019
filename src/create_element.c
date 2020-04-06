@@ -5,7 +5,7 @@
 ** create element
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 elem_t create_element(elem_t element, char *element_name,
                                                     float pos_x, float pos_y)

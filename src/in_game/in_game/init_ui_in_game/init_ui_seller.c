@@ -5,7 +5,7 @@
 ** init seller
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_seller(game_t *game)
 {

@@ -5,7 +5,7 @@
 ** ui main menu
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_main_menu(game_t *game)
 {

@@ -5,7 +5,7 @@
 ** create character
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int create_character(game_t *game)
 {

@@ -5,7 +5,7 @@
 ** draw pregame
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 void draw_smiling_face(game_t *game)
 {

@@ -79,7 +79,7 @@ void destroy_pause_menu(game_t *game);
 *   GAME   *
 \**********/
 
-int init_in_game(game_t *game);
+void *init_in_game(game_t *game);
 int init_in_game_scene(game_t *game);
 int create_character(game_t *game);
 int create_utils_in_game(game_t *game);

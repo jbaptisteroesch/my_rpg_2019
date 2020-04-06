@@ -5,7 +5,7 @@
 ** leave state cause of error
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 int change_state_cause_of_error(game_t *game)
 {

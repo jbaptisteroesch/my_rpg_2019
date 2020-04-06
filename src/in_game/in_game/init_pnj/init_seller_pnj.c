@@ -5,7 +5,7 @@
 ** seller pnj
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_seller_pnj(game_t *game)
 {

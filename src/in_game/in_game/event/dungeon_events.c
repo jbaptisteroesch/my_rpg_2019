@@ -5,7 +5,7 @@
 ** game_event
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int dungeon_events(game_t *game)
 {

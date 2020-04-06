@@ -5,7 +5,7 @@
 ** main menu
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 void (*select_draw_in_game[5])(game_t *game) = {
     draw_outside,
@@ -17,6 +17,7 @@ void (*select_draw_in_game[5])(game_t *game) = {
 
 void draw_in_game(game_t *game)
 {
+    is_player_walking(game);
     select_draw_in_game[game->player.is_on_scene](game);
     return;
 }

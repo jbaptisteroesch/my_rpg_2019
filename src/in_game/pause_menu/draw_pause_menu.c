@@ -5,7 +5,7 @@
 ** pause menu
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 void draw_are_you_sure_window(game_t *game)
 {

@@ -5,7 +5,7 @@
 ** ui pregame
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_pregame(game_t *game)
 {

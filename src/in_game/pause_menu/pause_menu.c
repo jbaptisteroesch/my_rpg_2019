@@ -5,7 +5,7 @@
 ** pause menu
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 bool clear_pause_menu(game_t *game, bool is_act)
 {

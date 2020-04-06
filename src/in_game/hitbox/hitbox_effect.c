@@ -5,7 +5,7 @@
 ** hitbox_player
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 static int hitbox_verification(elem_t *c, hitbox_t *h, game_t *ga)
 {

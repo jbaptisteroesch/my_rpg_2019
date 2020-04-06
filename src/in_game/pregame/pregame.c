@@ -5,7 +5,7 @@
 ** pregame
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int init_pregame(game_t *game)
 {
@@ -18,13 +18,23 @@ int init_pregame(game_t *game)
 
 int pregame(game_t *game)
 {
+    sfThread *thread;
+    bool run_thread = true;
+    void *ptr = &init_in_game;
+
+    thread = sfThread_create(ptr, game);
     if (init_pregame(game))
         change_state_cause_of_error(game);
     while (game->game_state[PREGAME] == 1) {
         draw_pregame(game);
         events_pregame(game);
+        if (run_thread == true) {
+            sfThread_launch(thread);
+            run_thread = false;
+        }
         sfRenderWindow_display(game->window->window);
     }
+    sfThread_destroy(thread);
     destroy_pregame(game);
     return (0);
 }

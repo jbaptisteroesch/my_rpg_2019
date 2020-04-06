@@ -5,7 +5,7 @@
 ** init cave
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_cave(game_t *game)
 {

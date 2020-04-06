@@ -5,7 +5,7 @@
 ** draw file
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 void draw_cave(game_t *game)
 {

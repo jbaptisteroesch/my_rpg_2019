@@ -5,7 +5,7 @@
 ** events main menu
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int is_on_play_button_mm(game_t *game)
 {

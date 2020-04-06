@@ -5,7 +5,7 @@
 ** game_hitbox
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 static void hitbox_read_image(box_t *obj)
 {

@@ -108,6 +108,8 @@ HITBOX				=	game_hitbox.c				\
 PATH_FRAMBUFFER			=	src/framebuffer/
 FRAMEBUFFER				=	rpg_framebuffer.c
 
+INC_PATH=include
+
 SRC	=	$(addprefix $(PATH_SOURCE), $(SOURCE))						\
 		$(addprefix $(PATH_MAIN_MENU), $(MAIN_MENU))				\
 		$(addprefix $(PATH_SETTINGS_MENU), $(SETTINGS_MENU))		\
@@ -125,9 +127,9 @@ NAME	=		my_rpg
 
 OBJ		=		$(SRC:.c=.o)
 
-CFLAGS	=		-Wall -Werror
+CFLAGS	=		-Wall -Werror -I. -I$(INC_PATH)
 
-LIBS	=		-L ./lib/my -lmy -L ./lib/basics -lbasics -I ./include
+LIBS	=		-L ./lib/my -lmy -L ./lib/basics -lbasics
 
 OFLAGS	=		-O2
 
@@ -135,7 +137,7 @@ LDFLAGS	= 	-lcsfml-graphics \
 			-lcsfml-system \
 			-lcsfml-window \
 			-lcsfml-audio \
-			-lm \
+			-lm
 
 $(NAME):	$(OBJ)
 		@$(MAKE)	-s -C	lib/my

@@ -5,7 +5,7 @@
 ** pause menu
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 void destroy_pause_menu(game_t *game)
 {

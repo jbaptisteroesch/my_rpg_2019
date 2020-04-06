@@ -5,7 +5,7 @@
 ** game_event
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int outside_events(game_t *game)
 {

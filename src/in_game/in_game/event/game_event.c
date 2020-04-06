@@ -5,7 +5,7 @@
 ** events main menu
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int (*select_events_in_game[5])(game_t *game) = {
     outside_events,

@@ -5,7 +5,7 @@
 ** framebuffer
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int init_framebuffer(game_t *ga, int height, int width)
 {

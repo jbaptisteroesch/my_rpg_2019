@@ -5,7 +5,7 @@
 ** main.c
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 int (*select_game_state[5])(game_t *game) = {
     main_menu,

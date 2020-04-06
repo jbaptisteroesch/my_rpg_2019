@@ -5,7 +5,7 @@
 ** init outside
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_outside(game_t *game)
 {

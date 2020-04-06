@@ -5,7 +5,7 @@
 ** buttons pregame
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int create_pregame_buttons(game_t *game)
 {

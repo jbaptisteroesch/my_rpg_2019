@@ -5,7 +5,7 @@
 ** event_move
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 void move_character(game_t *game, int x, int y)
 {

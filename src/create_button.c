@@ -5,7 +5,7 @@
 ** create button
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 button_t create_button(button_t button, char *button_name,
                                                     float pos_x, float pos_y)

@@ -5,7 +5,7 @@
 ** in game
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int init_common_to_scenes(game_t *game)
 {

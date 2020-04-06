@@ -5,7 +5,7 @@
 ** create buttons mm
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int create_buttons_main_menu(game_t *game)
 {

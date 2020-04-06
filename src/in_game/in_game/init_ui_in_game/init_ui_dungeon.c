@@ -5,7 +5,7 @@
 ** init dungeon
 */
 
-#include "../../../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_dungeon(game_t *game)
 {

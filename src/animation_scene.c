@@ -5,7 +5,7 @@
 ** destroy settings menu
 */
 
-#include "../include/rpg.h"
+#include "rpg.h"
 
 void draw_animation(game_t *game)
 {

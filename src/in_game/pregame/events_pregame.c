@@ -5,7 +5,7 @@
 ** events pregame
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int analyse_mouse_actions_pregame(game_t *game)
 {

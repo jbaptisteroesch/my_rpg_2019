@@ -5,7 +5,7 @@
 ** in game
 */
 
-#include "../../../include/rpg.h"
+#include "rpg.h"
 
 int init_ui_in_game(game_t *game)
 {
