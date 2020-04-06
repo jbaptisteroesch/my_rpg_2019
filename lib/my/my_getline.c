@@ -1,16 +1,16 @@
 /*
-** EPITECH PROJECT, 2019
-** my_getnbr
+** EPITECH PROJECT, 2020
+** defender project
 ** File description:
-** return a number send to the function as a string
+** my getline
 */
-
-#define _GNU_SOURCE
 
 #include "my.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+
+#define _GNU_SOURCE
 
 int my_getline(char *filepath)
 {

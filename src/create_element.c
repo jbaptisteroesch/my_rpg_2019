@@ -5,7 +5,7 @@
 ** create element
 */
 
-#include "../include/my.h"
+#include "../include/rpg.h"
 
 elem_t create_element(elem_t element, char *element_name,
                                                     float pos_x, float pos_y)
@@ -16,5 +16,7 @@ elem_t create_element(elem_t element, char *element_name,
     element.set_position.x = pos_x;
     element.set_position.y = pos_y;
     sfSprite_setPosition(element.sprite, element.set_position);
+    element.is_display = false;
+    element.gen_action = false;
     return (element);
 }

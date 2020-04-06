@@ -30,14 +30,13 @@ SRC		=		my_getnbr.c					\
 				on_lowercase.c				\
 				on_uppercase.c				\
 				my_strdup.c					\
-				my_getline.c				\
 				check_fd.c					\
 				my_nbrtoarray.c				\
 				my_int_size.c
 
 $(NAME):	$(OBJ)
-
 			ar rc $(NAME) $(OBJ)
+			cp my.h ./../../include/library
 			cp libmy.a ../
 
 all:		$(NAME)

@@ -5,14 +5,18 @@
 ** main menu
 */
 
-#include "../../../include/my.h"
+#include "../../../include/rpg.h"
+
+void (*select_draw_in_game[5])(game_t *game) = {
+    draw_outside,
+    draw_tavern,
+    draw_seller,
+    draw_cave,
+    draw_dungeon,
+};
 
 void draw_in_game(game_t *game)
 {
-    sfRenderWindow_drawSprite(game->window->window,
-                            game->game_scenes[0].ui_scene[MAP].sprite, NULL);
-        sfRenderWindow_drawSprite(game->window->window,
-                            game->character.sprite, NULL);
-
+    select_draw_in_game[game->player.is_on_scene](game);
     return;
 }

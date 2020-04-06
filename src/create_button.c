@@ -5,7 +5,7 @@
 ** create button
 */
 
-#include "../include/my.h"
+#include "../include/rpg.h"
 
 button_t create_button(button_t button, char *button_name,
                                                     float pos_x, float pos_y)
@@ -16,5 +16,6 @@ button_t create_button(button_t button, char *button_name,
     button.position.x = pos_x;
     button.position.y = pos_y;
     sfSprite_setPosition(button.sprite, button.position);
+    button.is_hover = false;
     return (button);
 }

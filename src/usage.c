@@ -1,13 +1,12 @@
 /*
 ** EPITECH PROJECT, 2019
-** my_runner Project
+** rpg Project
 ** File description:
 ** usage
 */
 
-#include "../include/my.h"
+#include "../include/rpg.h"
 
-//!!
 void usage(void)
 {
     my_putstr("RPG game created with CSFML.\n");
@@ -16,7 +15,7 @@ void usage(void)
     my_putstr("User interraction :\n");
     my_putstr("ARROWS_KEYS            to move your character.\n");
     my_putstr("ESCAPE_KEY            pause the game.\n");
-    my_putstr("MOUSE                 ....\n");
+    my_putstr("MOUSE                 menus interaction\n");
     my_putstr("Have fun !\n");
     return;
 }
