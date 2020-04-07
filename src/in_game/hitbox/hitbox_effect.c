@@ -17,6 +17,7 @@ static int hitbox_verification(elem_t *c, hitbox_t *h, game_t *ga)
             if (OUT_OF_RANGE)
                 continue;
             if (BLUE_MATCH && !bool_blue) {
+                printf("BLUE MATCH\n");
                 bool_blue = 1;
                 h->bool_display = 0;
             }
