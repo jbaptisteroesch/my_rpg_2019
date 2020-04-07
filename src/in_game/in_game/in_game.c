@@ -18,10 +18,18 @@ void *init_in_game(game_t *game)
     return ((void *) 1);
 }
 
-int in_game(game_t *game)
+int init_in_game_character(game_t *game)
 {
     if (create_character(game))
         change_state_cause_of_error(game);
+    if (hitbox_select_skin(game))
+        change_state_cause_of_error(game);
+    return (0);
+}
+
+int in_game(game_t *game)
+{
+    init_in_game_character(game);
     sfClock_restart(game->clock);
     while (game->game_state[GAME] == 1) {
         sfRenderWindow_clear(WINDOW, sfBlack);

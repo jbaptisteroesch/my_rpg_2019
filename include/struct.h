@@ -121,6 +121,7 @@ typedef struct player_s
     int gold;
     elem_t *inventory;
     elem_t character;
+    elem_t pl_not_op;
     int is_walking;
     int type;
     int is_on_scene;

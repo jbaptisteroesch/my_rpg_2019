@@ -87,7 +87,8 @@ int in_game(game_t *game);
 void draw_in_game(game_t *game);
 void destroy_in_game(game_t *game);
 void select_skin(game_t *game);
-
+void select_transparent_skin(game_t *game);
+void init_character_pos(game_t *game);
 
 /****************\
 *   DRAW SCENE   *

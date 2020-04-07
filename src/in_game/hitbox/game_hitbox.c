@@ -45,8 +45,6 @@ int init_hitbox(game_t *ga)
     ga->hit.bool_display = 1;
     if (init_box(&ga->hit.map, 0, 0, "media/Collisions/outside_collision.png"))
         return (1);
-    if (hitbox_select_skin(ga))
-        return (1);
     return (0);
 }
 

@@ -11,6 +11,5 @@ void draw_dungeon(game_t *game)
 {
     drawSprite(WINDOW,
             game->game_scenes[DUNGEON_MAP].ui_scene[MAP].sprite, NULL);
-    drawSprite(WINDOW, game->player.character.sprite, NULL);
     return;
 }
