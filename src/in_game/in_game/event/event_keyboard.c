@@ -27,7 +27,6 @@ int event_keyboard(game_t *game)
 void move_rect_player(game_t *ga)
 {
     static int reverse = 1;
-
     if (reverse == 0)
         ga->player.character.rect.left -= 47;
     else if (reverse == 1)
@@ -43,6 +42,8 @@ void move_rect_player(game_t *ga)
         reverse = 1;
     }
     sfSprite_setTextureRect(ga->player.character.sprite,
+    ga->player.character.rect);
+    sfSprite_setTextureRect(ga->player.pl_not_op.sprite,
     ga->player.character.rect);
     return;
 }
