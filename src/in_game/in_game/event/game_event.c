@@ -27,7 +27,10 @@ int events_in_game(game_t *game)
         if (game->window->event.type == sfEvtKeyReleased &&
             game->window->event.key.code == sfKeyEscape)
             game->game_state[PAUSE_MENU] = 1;
+        GET_MOUSE_POS;
+        inventory_events(game);
         event_keyboard(game);
+        is_player_walking(game);
     }
     return (1);
 }

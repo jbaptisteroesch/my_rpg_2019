@@ -15,6 +15,8 @@ void *init_in_game(game_t *game)
         change_state_cause_of_error(game);
     if (create_utils_in_game(game))
         change_state_cause_of_error(game);
+    if (init_inventory(game))
+        change_state_cause_of_error(game);
     return ((void *) 1);
 }
 

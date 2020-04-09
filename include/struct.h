@@ -114,14 +114,23 @@ typedef struct settings_s
 *   PLAYER   *
 \************/
 
+typedef struct inventory_s
+{
+    bool inventory_is_open;
+    bool has_drop_shield;
+    bool has_drop_sword;
+    bool is_equip_shield;
+    bool is_equip_sword;
+
+} inventory_t;
+
 typedef struct player_s
 {
     int experience;
     int level;
-    int gold;
-    elem_t *inventory;
     elem_t character;
     elem_t pl_not_op;
+    inventory_t inventory;
     int is_walking;
     int type;
     int is_on_scene;
@@ -165,13 +174,21 @@ typedef struct hitbox_s
 *    GAME    *
 \************/
 
+typedef struct common_s
+{
+    elem_t *common_ui;
+    button_t close_inv_butt;
+    rectangle_t *inv_rectangle;
+    elem_t *inventory_ui;
+} common_t;
+
 typedef struct game_s
 {
     window_t *window;
     fbf_t buffer;
     menu_t *menu;
     scene_t *game_scenes;
-    elem_t *common_to_scenes;
+    common_t common;
     player_t player;
     settings_t settings;
     sfClock *clock;

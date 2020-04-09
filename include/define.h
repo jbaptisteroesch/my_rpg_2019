@@ -20,6 +20,8 @@
 
 #define MOUSE_CLICK game->window->event.type == sfEvtMouseButtonPressed
 #define MOUSE_RELEASED game->window->event.type == sfEvtMouseButtonReleased
+#define GET_MOUSE_POS game->mouse_position = \
+                        sfMouse_getPositionRenderWindow(game->window->window)
 
 /*******************************\
 *   REWRITE TOO LONG FUNCTION   *

@@ -36,7 +36,7 @@ int create_rectangle_mm(game_t *game, int num, int x, int y)
     sfRectangleShape_setPosition(game->menu[MAIN_MENU].rectangle[num].rect,
                         game->menu[MAIN_MENU].rectangle[num].rect_position);
     game->menu[MAIN_MENU].rectangle[num].is_hover = false;
-    return (1);
+    return (0);
 }
 
 int init_button_main_menu(game_t *game)

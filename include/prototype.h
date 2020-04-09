@@ -100,6 +100,7 @@ void draw_tavern(game_t *game);
 void draw_seller(game_t *game);
 void draw_cave(game_t *game);
 void draw_dungeon(game_t *game);
+void draw_inventory(game_t *game);
 
 /**********\
 *   INIT   *
@@ -116,6 +117,8 @@ int init_tavern_pnj(game_t *game);
 int init_seller_pnj(game_t *game);
 int init_cave_pnj(game_t *game);
 int init_dungeon_pnj(game_t *game);
+int init_inventory(game_t *game);
+int rectangle_set_position(sfRectangleShape *rect, int x, int y);
 
 /***********\
 *   EVENT   *
@@ -124,11 +127,13 @@ int init_dungeon_pnj(game_t *game);
 int (*select_events_in_game[5])(game_t *game);
 int events_in_game(game_t *game);
 int event_keyboard(game_t *game);
+int inventory_events(game_t *game);
 int outside_events(game_t *game);
 int tavern_events(game_t *game);
 int seller_events(game_t *game);
 int cave_events(game_t *game);
 int dungeon_events(game_t *game);
+int equipment(game_t *game);
 
 /**************\
 *   MOVEMENT   *
