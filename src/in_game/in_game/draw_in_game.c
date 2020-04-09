@@ -22,6 +22,7 @@ void draw_in_game(game_t *game)
         drawSprite(WINDOW, game->player.character.sprite, NULL);
     else
         drawSprite(WINDOW, game->player.pl_not_op.sprite, NULL);
-    is_player_walking(game);
+    if (game->player.inventory.inventory_is_open == true)
+        draw_inventory(game);
     return;
 }

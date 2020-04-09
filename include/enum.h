@@ -111,6 +111,24 @@ enum pnj{
     PNJ_S
 };
 
+enum inventory{
+    INV_UI,
+    INV_CLOSE_HOV,
+    BIG_SHIELD,
+    LITTLE_SHIELD,
+    BIG_SWORD,
+    LITTLE_SWORD,
+    SHIELD_SHADOW,
+    SWORD_SHADOW
+};
+enum inv_rectangle{
+    INV_RECT_CLOSE,
+    INV_RECT_BSH,
+    INV_RECT_BSW,
+    INV_RECT_LSH,
+    INV_RECT_LSW
+};
+
 enum common_to_scenes{
     TEXT_BOX
 };

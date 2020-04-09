@@ -13,10 +13,13 @@ int create_character(game_t *game)
     select_transparent_skin(game);
     init_character_pos(game);
     game->player.experience = 0;
-    game->player.gold = 0;
     game->player.level = 0;
     game->player.is_on_scene = 0;
-    // TODO inventory
+    game->player.inventory.inventory_is_open = 0;
+    game->player.inventory.has_drop_shield = 1;
+    game->player.inventory.has_drop_sword = 1;
+    game->player.inventory.is_equip_shield = 0;
+    game->player.inventory.is_equip_sword = 0;
     return (0);
 }
 
