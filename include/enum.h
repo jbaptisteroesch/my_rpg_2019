@@ -160,4 +160,17 @@ enum character_sprite {
     BROWN_GIRL
 };
 
+/************\
+*   HITBOX   *
+\************/
+
+enum hitbox_color {
+    LOW_BLUE,
+    OUTSIDE,
+    TAVERN,
+    SELLER,
+    CAVE,
+    DUNGEON,
+    PNJ
+};
 #endif /* !ENUM_H_ */

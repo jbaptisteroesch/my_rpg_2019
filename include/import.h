@@ -31,5 +31,6 @@
 #include <fcntl.h>
 #include <stdbool.h>
 #include <math.h>
+#include <sys/types.h>
 
 #endif /* !IMPORT_H_ */

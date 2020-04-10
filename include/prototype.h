@@ -167,10 +167,27 @@ void framebuffer_destroy(fbf_t *buffer);
 \**************/
 
 int init_hitbox(game_t *ga);
-int init_box(box_t *obj, int x, int y, char *path);
+int init_box(hitbox_t *hit, box_t *obj, sfVector2i pos, char *path);
+int init_color(hitbox_t *hit);
 void destroy_hitbox(game_t *ga);
+void hitbox_read_image(hitbox_t *hit, box_t *obj);
 int hitbox_player(game_t *ga, int direction);
 int hitbox_effect(game_t *ga, int n_x, int n_y);
 int hitbox_select_skin(game_t *ga);
+int hitbox_pnj(game_t *ga);
+
+/*************\
+*    SCENE    *
+\*************/
+
+int scene_outside(game_t *ga);
+int scene_tavern(game_t *ga);
+int scene_seller(game_t *ga);
+int scene_cave(game_t *ga);
+int scene_dungeon(game_t *ga);
+void exit_scene_tavern(game_t *ga);
+void exit_scene_seller(game_t *ga);
+void exit_scene_cave(game_t *ga);
+void exit_scene_dungeon(game_t *ga);
 
 #endif /* !PROTOTYPE_H_ */

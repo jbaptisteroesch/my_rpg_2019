@@ -166,7 +166,10 @@ typedef struct hitbox_s
 {
     box_t map;
     box_t player;
-    int bool_display;
+    bool transparent;
+    bool pnj;
+    u_int8_t ic_c;
+    sfColor *color;
 }hitbox_t;
 
 

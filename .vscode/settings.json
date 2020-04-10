@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "menu_enum.h": "c"
+        "menu_enum.h": "c",
+        "rpg.h": "c"
     }
 }

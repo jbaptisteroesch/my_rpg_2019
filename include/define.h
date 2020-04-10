@@ -41,14 +41,18 @@
 *   HITBOX   *
 \************/
 
-#define BLUE_MATCH h->player.box[y + c->rect.top][x + c->rect.left] & 4\
-    && h->map.box[p.y + y][p.x + x] & 4
+#define RED_MATCH (map & 128 && player & 128)
 
-#define GREEN_MATCH h->player.box[y + c->rect.top][x + c->rect.left] & 2\
-    && h->map.box[p.y + y][p.x + x] & 2
+#define GREEN_MATCH (map & 64 && player & 64)
 
-#define RED_MATCH h->player.box[y + c->rect.top][x + c->rect.left] & 1 \
-    && h->map.box[p.y + y][p.x + x] & 1
+#define BLUE_MATCH (map & 32 && player & 32)
+
+#define LOW_BLUE_MATCH (map == 1 && player & 128)
+
+#define SCENE_MATCH map == i && player & 32
+
+#define PLAYER_PIXEL h->player.box[y + c->rect.top][x + c->rect.left]
+#define MAP_PIXEL h->map.box[p.y + y][p.x + x]
 
 #define OUT_OF_RANGE p.y + y < 0 || p.y + y >= h->map.dim.y || p.x + x < 0||\
     p.x + x >= h->map.dim.x || y + c->rect.top >= h->player.dim.y ||\

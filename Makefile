@@ -106,7 +106,16 @@ PAUSE				=	pause_menu.c				\
 PATH_HITBOX			=	src/in_game/hitbox/
 HITBOX				=	game_hitbox.c				\
 						hitbox_effect.c				\
-						hitbox_skin.c
+						hitbox_skin.c				\
+						hitbox_color.c				\
+						hitbox_read_image.c			\
+						hitbox_pnj.c
+
+
+## ========================================================================== ##
+PATH_SCENE			=	src/in_game/hitbox/scene/
+SCENE				=	hitbox_scene.c				\
+						scene_exit.c
 
 ## ========================================================================== ##
 PATH_FRAMBUFFER			=	src/framebuffer/
@@ -124,6 +133,7 @@ SRC	=	$(addprefix $(PATH_SOURCE), $(SOURCE))						\
 		$(addprefix $(PATH_GAME_EVENT), $(GAME_EVENT))				\
 		$(addprefix $(PATH_PAUSE), $(PAUSE))						\
 		$(addprefix $(PATH_HITBOX), $(HITBOX))						\
+		$(addprefix $(PATH_SCENE), $(SCENE))						\
 		$(addprefix $(PATH_FRAMBUFFER), $(FRAMEBUFFER))				\
 		$(addprefix $(PATH_PREGAME), $(PREGAME))
 

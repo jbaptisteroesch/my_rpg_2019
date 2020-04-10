@@ -13,7 +13,7 @@ int init_ui_seller(game_t *game)
         return (1);
     game->game_scenes[SELLER_MAP].ui_scene[MAP] = create_element(
         game->game_scenes[SELLER_MAP].ui_scene[MAP], "media/game/seller.png",
-                                                                520, 48);
-                                    // !! NE PAS TOUCHER A CES COORDONNES
+                                                                472, 0);
+                                    // !! NE PAS TOUCHER A CES COORDONNES (520, 48)
     return (0);
 }
