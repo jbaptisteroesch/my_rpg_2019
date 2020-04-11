@@ -60,7 +60,8 @@ INIT_UI_GAME		=	init_outside_ui.c			\
 						init_ui_seller.c			\
 						init_ui_cave.c				\
 						init_ui_dungeon.c			\
-						init_inventory.c
+						init_inventory.c			\
+						init_in_game_text.c
 
 ## ========================================================================== ##
 PATH_INIT_PNJ	=	src/in_game/in_game/init_pnj/
@@ -91,7 +92,8 @@ GAME_EVENT			=	game_event.c					\
 						cave_events.c					\
 						dungeon_events.c				\
 						inventory_events.c				\
-						choose_equipment.c
+						choose_equipment.c				\
+						pnj_event.c
 
 ## ========================================================================== ##
 PATH_PAUSE			=	src/in_game/pause_menu/

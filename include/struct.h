@@ -93,8 +93,9 @@ typedef struct menu_s
 typedef struct scene_s
 {
     elem_t *ui_scene;
-    string_t *texts;
+    string_t texts;
     elem_t *pnj;
+    char *dialog;
     ennemy_t *ennemys;
     sfSoundBuffer **sbuffer;
     sfSound **sounds;

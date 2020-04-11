@@ -24,5 +24,10 @@ void draw_in_game(game_t *game)
         drawSprite(WINDOW, game->player.pl_not_op.sprite, NULL);
     if (game->player.inventory.inventory_is_open == true)
         draw_inventory(game);
+    //if (game->hit.pnj == 1) {
+        drawSprite(WINDOW, game->common.common_ui[TEXT_BOX].sprite, NULL);
+        sfRenderWindow_drawText(WINDOW,
+            game->game_scenes[game->player.is_on_scene].texts.string, NULL);
+    //}
     return;
 }
