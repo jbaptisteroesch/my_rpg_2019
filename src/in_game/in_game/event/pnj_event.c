@@ -32,19 +32,28 @@ int set_pnj_dialog(game_t *game, char *text)
     return (0);
 }
 
+char *clean_str(game_t *game, char *curr)
+{
+    curr[0] = '\0';
+    sfText_setString(game->game_scenes[game->player.is_on_scene].texts.string,
+        curr);
+    free(curr);
+    curr = NULL;
+    return (curr);
+}
+
 int pnj_event(game_t *game)
 {
     static double time;
     static char *curr_dialog = NULL;
-    game->time = sfClock_getElapsedTime(game->clock);
 
+    game->time = sfClock_getElapsedTime(game->clock);
     time = time + game->time.microseconds / 1000000.0;
     if (game->hit.pnj == 0) {
         time = 0;
         game->game_scenes[game->player.is_on_scene].pos_in_dial = 0;
         if (curr_dialog != NULL)
-            free(curr_dialog);
-        curr_dialog = NULL;
+            curr_dialog = clean_str(game, curr_dialog);
     }
     if (time >= 0.1 && game->hit.pnj == 1) {
         curr_dialog = rpg_dialog(game, curr_dialog);
