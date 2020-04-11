@@ -26,7 +26,7 @@ int init_in_game_text(game_t *game)
             game->game_scenes[i].texts.color);
         sfText_setCharacterSize(game->game_scenes[i].texts.string, 40);
         sfText_setPosition(game->game_scenes[i].texts.string, position);
-        game->game_scenes[game->player.is_on_scene].pos_in_dial = 0;
+        game->game_scenes[i].pos_in_dial = 0;
     }
     return (0);
 }

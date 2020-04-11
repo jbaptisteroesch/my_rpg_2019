@@ -37,7 +37,7 @@ char *read_file(char *filepath)
     size = check_file_size(filepath);
     if (size == 0)
         return (NULL);
-    if (!(buffer = malloc(sizeof(char) * size)))
+    if (!(buffer = malloc(sizeof(char) * (size + 1))))
         return (NULL);
     fp = fopen(filepath, "r");
     b_read = fread(buffer, sizeof(char), size, fp);
