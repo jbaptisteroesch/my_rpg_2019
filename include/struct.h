@@ -96,6 +96,7 @@ typedef struct scene_s
     string_t texts;
     elem_t *pnj;
     char *dialog;
+    int pos_in_dial;
     ennemy_t *ennemys;
     sfSoundBuffer **sbuffer;
     sfSound **sounds;

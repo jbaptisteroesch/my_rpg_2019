@@ -18,5 +18,7 @@ int init_cave_pnj(game_t *game)
         game->game_scenes[CAVE_MAP].pnj[PNJ_S],
                 "media/pnj/w_cave.png", 800, 500);
     game->game_scenes[CAVE_MAP].dialog = read_file("media/pnj/cave_dialog");
+    if (game->game_scenes[CAVE_MAP].dialog == NULL)
+        return (1);
     return (0);
 }

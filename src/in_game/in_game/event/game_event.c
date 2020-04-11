@@ -29,7 +29,6 @@ int events_in_game(game_t *game)
             game->game_state[PAUSE_MENU] = 1;
         GET_MOUSE_POS;
         inventory_events(game);
-        rpg_event(game);
         event_keyboard(game);
         is_player_walking(game);
     }

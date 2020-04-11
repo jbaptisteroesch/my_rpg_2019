@@ -18,5 +18,7 @@ int init_tavern_pnj(game_t *game)
         game->game_scenes[TAVERN_MAP].pnj[PNJ_S],
                 "media/pnj/w_tavern.png", 890, 144);
     game->game_scenes[TAVERN_MAP].dialog = read_file("media/pnj/tavern_dialog");
+    if (game->game_scenes[TAVERN_MAP].dialog == NULL)
+        return (1);
     return (0);
 }

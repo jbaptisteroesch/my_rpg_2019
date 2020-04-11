@@ -129,7 +129,7 @@ int (*select_events_in_game[5])(game_t *game);
 int events_in_game(game_t *game);
 int event_keyboard(game_t *game);
 int inventory_events(game_t *game);
-int rpg_event(game_t *game);
+int pnj_event(game_t *game);
 int outside_events(game_t *game);
 int tavern_events(game_t *game);
 int seller_events(game_t *game);

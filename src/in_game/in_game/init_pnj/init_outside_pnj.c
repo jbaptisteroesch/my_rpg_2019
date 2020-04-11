@@ -19,5 +19,7 @@ int init_outside_pnj(game_t *game)
                 "media/pnj/w_outside.png", 800, 500);
     game->game_scenes[OUTSIDE_MAP].dialog =
         read_file("media/pnj/outside_dialog");
+    if (game->game_scenes[OUTSIDE_MAP].dialog == NULL)
+        return (1);
     return (0);
 }

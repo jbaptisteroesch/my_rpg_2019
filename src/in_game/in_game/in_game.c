@@ -37,6 +37,7 @@ int in_game(game_t *game)
     while (game->game_state[GAME] == 1) {
         sfRenderWindow_clear(WINDOW, sfBlack);
         events_in_game(game);
+        pnj_event(game);
         draw_in_game(game);
         while(game->game_state[PAUSE_MENU] == 1)
             pause_menu(game);

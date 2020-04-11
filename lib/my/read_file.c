@@ -35,12 +35,14 @@ char *read_file(char *filepath)
     char *buffer = NULL;
 
     size = check_file_size(filepath);
+    if (size == 0)
+        return (NULL);
     if (!(buffer = malloc(sizeof(char) * size)))
         return (NULL);
     fp = fopen(filepath, "r");
     b_read = fread(buffer, sizeof(char), size, fp);
     if (b_read == 0)
-        return (0);
+        return (NULL);
     buffer[size] = '\0';
     fclose(fp);
     return (buffer);
