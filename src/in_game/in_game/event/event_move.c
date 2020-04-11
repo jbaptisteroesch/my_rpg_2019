@@ -30,7 +30,9 @@ void move_left(game_t *ga)
     ga->player.character.rect);
     sfSprite_setTextureRect(ga->player.pl_not_op.sprite,
     ga->player.character.rect);
-    if (map.x < -50 && player.x < 960) {
+    if (ga->player.is_on_scene != OUTSIDE_MAP)
+        return(move_character(ga, -6, 0));
+    else if (map.x < -50 && player.x < 960) {
         if (hitbox_effect(ga, -6, 0)) return;
         sfSprite_move(ga->game_scenes[OUTSIDE_MAP].ui_scene[MAP].sprite, move);
     } else
@@ -50,7 +52,9 @@ void move_right(game_t *ga)
     ga->player.character.rect);
     sfSprite_setTextureRect(ga->player.pl_not_op.sprite,
     ga->player.character.rect);
-    if (map.x > -430 && player.x > 960) {
+    if (ga->player.is_on_scene != OUTSIDE_MAP)
+        return(move_character(ga, 6, 0));
+    else if (map.x > -430 && player.x > 960) {
         if (hitbox_effect(ga, 6, 0)) return;
         sfSprite_move(ga->game_scenes[OUTSIDE_MAP].ui_scene[MAP].sprite, move);
     } else
@@ -67,13 +71,13 @@ void move_up(game_t *ga)
     if (ga->player.is_on_scene == DUNGEON_MAP) return (move_up_dungeon(ga));
     else if (ga->player.is_on_scene == CAVE_MAP)
         return (move_up_cave(ga));
-    else if (ga->player.is_on_scene != OUTSIDE_MAP)
-        return (move_character(ga, 0, -6));
     ga->player.character.rect.top = 147;
     sfSprite_setTextureRect(ga->player.character.sprite,
     ga->player.character.rect);
     sfSprite_setTextureRect(ga->player.pl_not_op.sprite,
     ga->player.character.rect);
+    if (ga->player.is_on_scene != OUTSIDE_MAP)
+        return (move_character(ga, 0, -6));
     if (map.y < -50 && player.y < 540) {
         if (hitbox_effect(ga, 0, -6)) return;
         sfSprite_move(ga->game_scenes[OUTSIDE_MAP].ui_scene[MAP].sprite, move);
@@ -87,8 +91,6 @@ void move_down(game_t *ga)
     if (ga->player.is_on_scene == DUNGEON_MAP) return (move_down_dungeon(ga));
     else if (ga->player.is_on_scene == CAVE_MAP)
         return (move_down_cave(ga));
-    else if (ga->player.is_on_scene != OUTSIDE_MAP)
-        return (move_character(ga, 0, 6));
     sfVector2f map = sfSprite_getPos(
                         ga->game_scenes[OUTSIDE_MAP].ui_scene[MAP].sprite);
     sfVector2f player = sfSprite_getPos(ga->player.character.sprite);
@@ -98,7 +100,9 @@ void move_down(game_t *ga)
     ga->player.character.rect);
     sfSprite_setTextureRect(ga->player.pl_not_op.sprite,
     ga->player.character.rect);
-    if (map.y > -1050 && player.y > 540) {
+    if (ga->player.is_on_scene != OUTSIDE_MAP)
+        return (move_character(ga, 0, 6));
+    else if (map.y > -1050 && player.y > 540) {
         if (hitbox_effect(ga, 0, 6)) return;
         sfSprite_move(ga->game_scenes[OUTSIDE_MAP].ui_scene[MAP].sprite, move);
     } else

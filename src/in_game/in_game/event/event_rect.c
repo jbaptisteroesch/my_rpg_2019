@@ -16,9 +16,9 @@ void is_player_walking(game_t *game)
     if (game->player.is_walking == 0)
         time = 0;
     else {
-        while (time >= 0.3) {
+        while (time >= 0.1) {
             move_rect_player(game);
-            time -= 0.3;
+            time -= 0.1;
         }
     }
     return;
