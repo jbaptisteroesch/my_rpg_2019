@@ -51,6 +51,8 @@
 
 #define SCENE_MATCH map == i && player & 32
 
+#define INTERACTION_MATCH map == 7 && player & 128
+
 #define PLAYER_PIXEL h->player.box[y + c->rect.top][x + c->rect.left]
 #define MAP_PIXEL h->map.box[p.y + y][p.x + x]
 

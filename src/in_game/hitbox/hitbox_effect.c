@@ -29,6 +29,8 @@ static int pixel_verification(game_t *ga, u_int8_t player, u_int8_t map)
             return (1);
         }
     }
+    if (INTERACTION_MATCH)
+        (*scene[6])(ga);
     return (0);
 }
 
@@ -37,7 +39,9 @@ static int hitbox_verification(game_t *ga, elem_t *c, hitbox_t *h)
     sfVector2i p = h->player.pos;
     bool collision = 0;
     int value = 0;
-
+    // sfVector2f a = sfSprite_getPosition(ga->player.character.sprite);
+    // printf("player pos x:%f y:%f\n", a.x, a.y);
+    // printf("player pos hitbox x:%d y:%d\n\n", p.x, p.y);
     h->transparent = 0;
     h->pnj = 0;
     for (int y = 0; y < c->rect.height; ++y) {
