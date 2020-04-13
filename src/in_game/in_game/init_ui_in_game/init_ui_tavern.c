@@ -14,6 +14,5 @@ int init_ui_tavern(game_t *game)
     game->game_scenes[TAVERN_MAP].ui_scene[MAP] = create_element(
         game->game_scenes[TAVERN_MAP].ui_scene[MAP], "media/game/tavern.png",
                                                                 497, 1);
-                                    // !! NE PAS TOUCHER A CES COORDONNES (545, 49)
     return (0);
 }

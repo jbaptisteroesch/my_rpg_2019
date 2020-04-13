@@ -14,6 +14,5 @@ int init_ui_cave(game_t *game)
     game->game_scenes[CAVE_MAP].ui_scene[MAP] = create_element(
         game->game_scenes[CAVE_MAP].ui_scene[MAP], "media/game/cave.png",
                                                                 435, -90);
-                                            // !! NE MODIFIER QUE LE Y !!
     return (0);
 }

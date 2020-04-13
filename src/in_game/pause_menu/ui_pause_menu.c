@@ -19,6 +19,7 @@ int blk_pm(game_t *game)
             color);
     return (0);
 }
+
 int init_ui_pause_menu(game_t *game)
 {
     if (!(game->menu[PAUSE_MENU].ui_scene = malloc(sizeof(elem_t) * 3)))

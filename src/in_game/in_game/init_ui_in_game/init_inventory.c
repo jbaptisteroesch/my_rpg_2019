@@ -6,6 +6,7 @@
 */
 
 #include "rpg.h"
+
 int init_inventory_object(game_t *game)
 {
     game->common.inventory_ui[BIG_SHIELD] = create_element(

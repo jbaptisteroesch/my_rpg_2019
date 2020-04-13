@@ -39,7 +39,7 @@ int in_game(game_t *game)
         events_in_game(game);
         pnj_event(game);
         draw_in_game(game);
-        while(game->game_state[PAUSE_MENU] == 1)
+        while (game->game_state[PAUSE_MENU] == 1)
             pause_menu(game);
         while (game->player.is_in_fight == 1)
             battle_scene(game);

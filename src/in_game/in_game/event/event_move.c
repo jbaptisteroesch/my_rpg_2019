@@ -31,7 +31,7 @@ void move_left(game_t *ga)
     sfSprite_setTextureRect(ga->player.pl_not_op.sprite,
     ga->player.character.rect);
     if (ga->player.is_on_scene != OUTSIDE_MAP)
-        return(move_character(ga, -6, 0));
+        return (move_character(ga, -6, 0));
     else if (map.x < -50 && player.x < 960) {
         if (hitbox_effect(ga, -6, 0)) return;
         sfSprite_move(ga->game_scenes[OUTSIDE_MAP].ui_scene[MAP].sprite, move);
@@ -53,7 +53,7 @@ void move_right(game_t *ga)
     sfSprite_setTextureRect(ga->player.pl_not_op.sprite,
     ga->player.character.rect);
     if (ga->player.is_on_scene != OUTSIDE_MAP)
-        return(move_character(ga, 6, 0));
+        return (move_character(ga, 6, 0));
     else if (map.x > -430 && player.x > 960) {
         if (hitbox_effect(ga, 6, 0)) return;
         sfSprite_move(ga->game_scenes[OUTSIDE_MAP].ui_scene[MAP].sprite, move);

@@ -14,6 +14,5 @@ int init_ui_dungeon(game_t *game)
     game->game_scenes[DUNGEON_MAP].ui_scene[MAP] = create_element(
         game->game_scenes[DUNGEON_MAP].ui_scene[MAP], "media/game/dungeon.png",
                                                                 200, -825);
-                // !! ATTENDRE LA BONNE MAP (MANQUE BLOC DE GLACE A DROITE)
     return (0);
 }
