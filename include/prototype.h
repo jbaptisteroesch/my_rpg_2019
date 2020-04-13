@@ -90,6 +90,7 @@ void select_skin(game_t *game);
 void select_transparent_skin(game_t *game);
 void init_character_pos(game_t *game);
 int init_in_game_text(game_t *game);
+int battle_scene(game_t *game);
 
 /****************\
 *   DRAW SCENE   *
@@ -136,6 +137,15 @@ int seller_events(game_t *game);
 int cave_events(game_t *game);
 int dungeon_events(game_t *game);
 int equipment(game_t *game);
+
+/******************\
+*   BATTLE SCENE   *
+\******************/
+
+void draw_battle_scene(game_t *game);
+int events_battle_scene(game_t *game);
+void destroy_battle_scene(game_t *game);
+
 
 /**************\
 *   MOVEMENT   *

@@ -96,6 +96,15 @@ GAME_EVENT			=	game_event.c					\
 						pnj_event.c
 
 ## ========================================================================== ##
+
+PATH_BATTLE_SCENE	=	src/in_game/in_game/battle_scene/
+BATTLE_SCENE		=	battle_scene.c				\
+						destroy_battle_scene.c		\
+						draw_battle_scene.c			\
+						events_battle_scene.c		\
+						init_battle_scene.c			\
+
+## ========================================================================== ##
 PATH_PAUSE			=	src/in_game/pause_menu/
 PAUSE				=	pause_menu.c				\
 						draw_pause_menu.c			\

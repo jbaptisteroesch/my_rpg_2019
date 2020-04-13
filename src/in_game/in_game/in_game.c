@@ -41,6 +41,8 @@ int in_game(game_t *game)
         draw_in_game(game);
         while(game->game_state[PAUSE_MENU] == 1)
             pause_menu(game);
+        while (game->player.is_in_fight == 1)
+            battle_scene(game);
         sfClock_restart(game->clock);
         sfRenderWindow_display(game->window->window);
     }

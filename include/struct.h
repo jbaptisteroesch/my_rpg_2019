@@ -136,6 +136,7 @@ typedef struct player_s
     int is_walking;
     int type;
     int is_on_scene;
+    bool is_in_fight;
 }player_t;
 
 
