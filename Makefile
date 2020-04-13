@@ -146,7 +146,8 @@ SRC	=	$(addprefix $(PATH_SOURCE), $(SOURCE))						\
 		$(addprefix $(PATH_HITBOX), $(HITBOX))						\
 		$(addprefix $(PATH_SCENE), $(SCENE))						\
 		$(addprefix $(PATH_FRAMBUFFER), $(FRAMEBUFFER))				\
-		$(addprefix $(PATH_PREGAME), $(PREGAME))
+		$(addprefix $(PATH_PREGAME), $(PREGAME))					\
+		$(addprefix $(PATH_BATTLE_SCENE), $(BATTLE_SCENE))
 
 NAME	=		my_rpg
 
