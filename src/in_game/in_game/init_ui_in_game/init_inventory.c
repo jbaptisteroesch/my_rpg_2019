@@ -17,16 +17,16 @@ int init_inventory_object(game_t *game)
         "media/inventory/shield_little.png", 924, 549);
     game->common.inventory_ui[BIG_SWORD] = create_element(
         game->common.inventory_ui[BIG_SWORD],
-        "media/inventory/sword_big.png", 1052, 575);
+        "media/inventory/bow_big.png", 1060, 575);
     game->common.inventory_ui[LITTLE_SWORD] = create_element(
         game->common.inventory_ui[LITTLE_SWORD],
-        "media/inventory/sword_little.png", 576, 547);
+        "media/inventory/bow_little.png", 576, 547);
     game->common.inventory_ui[SHIELD_SHADOW] = create_element(
         game->common.inventory_ui[SHIELD_SHADOW],
-        "media/inventory/shield_shadow.png", 790, 505);
+        "media/inventory/shield_shadow.png", 680, 505);
     game->common.inventory_ui[SWORD_SHADOW] = create_element(
         game->common.inventory_ui[SWORD_SHADOW],
-        "media/inventory/sword_shadow.png", 668, 410);
+        "media/inventory/bow_shadow.png", 785, 467);
     return (0);
 }
 
@@ -37,11 +37,11 @@ int create_rectangle_inventory(game_t *game, int num, int x, int y)
     game->common.inv_rectangle[num].rect_size.y = y;
     game->common.inv_rectangle[num].rect = sfRectangleShape_create();
     sfRectangleShape_setSize(game->common.inv_rectangle[num].rect,
-                        game->common.inv_rectangle[num].rect_size);
+        game->common.inv_rectangle[num].rect_size);
     sfRectangleShape_setFillColor(game->common.inv_rectangle[num].rect,
-                        game->common.inv_rectangle[num].color);
+        game->common.inv_rectangle[num].color);
     sfRectangleShape_setPosition(game->common.inv_rectangle[num].rect,
-                        game->common.inv_rectangle[num].rect_position);
+        game->common.inv_rectangle[num].rect_position);
     game->common.inv_rectangle[num].is_hover = false;
     return (0);
 }
@@ -92,5 +92,7 @@ int init_inventory(game_t *game)
     game->common.close_inv_butt = create_button(game->common.close_inv_butt,
         "media/inventory/quit_inventory_hov.png", 1313, 259);
     init_inventory_rectangle(game);
+    if (init_inventory_text(game))
+        return (1);
     return (0);
 }

@@ -19,6 +19,8 @@ int init_ui_in_game(game_t *game)
         return (1);
     if (init_ui_dungeon(game))
         return (1);
+    if (init_ui_arena(game))
+        return (1);
     return (0);
 }
 
@@ -32,15 +34,19 @@ int init_pnj_in_game(game_t *game)
         return (1);
     if (init_cave_pnj(game))
         return (1);
-    if (init_dungeon_pnj(game))
+    if (init_arena_pnj(game))
         return (1);
+    for (int i = 0; i < 5; ++i)
+        game->game_scenes[i].dial_activated = false;
     return (0);
 }
 
 int init_in_game_scene(game_t *game)
 {
-    if (!(game->game_scenes = malloc(sizeof(scene_t) * 5)))
+    if (!(game->game_scenes = malloc(sizeof(scene_t) * 7)))
         return (1);
+    game->fbf.cut.is_transition = false;
+    game->fbf.cut.past_transition = false;
     if (init_common_to_scenes(game))
         return (1);
     if (init_ui_in_game(game))

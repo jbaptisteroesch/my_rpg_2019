@@ -5,7 +5,7 @@
 ** destroy settings menu
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 void destroy_settings_menu(game_t *game)
 {

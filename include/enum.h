@@ -17,7 +17,8 @@ enum scenes{
     SETTINGS,
     PREGAME,
     GAME,
-    PAUSE_MENU
+    PAUSE_MENU,
+    END_GAME
 };
 
 enum ui_order{
@@ -108,7 +109,22 @@ enum pm_hov_buttons{
 
 enum pnj{
     PNJ_F,
-    PNJ_S
+    PNJ_S,
+    ENNEMY
+};
+
+enum day_time{
+    DAY,
+    NIGHT,
+    MORNING,
+    BEFORE_DAY,
+    REAL_NIGHT,
+    REAL_MORNING
+};
+
+enum arena_pnj{
+    ELF,
+    WOMAN
 };
 
 enum inventory{
@@ -121,6 +137,13 @@ enum inventory{
     SHIELD_SHADOW,
     SWORD_SHADOW
 };
+
+enum inventory_text{
+    LEVEL_NUM_TEXT,
+    POWER_WORD_TEXT,
+    POWER_NUM_TEXT
+};
+
 enum inv_rectangle{
     INV_RECT_CLOSE,
     INV_RECT_BSH,
@@ -142,7 +165,9 @@ enum scenes_in_game {
     TAVERN_MAP,
     SELLER_MAP,
     CAVE_MAP,
-    DUNGEON_MAP
+    DUNGEON_MAP,
+    ARENA_MAP,
+    END_GAME_SCENE
 };
 
 enum movements {
@@ -171,6 +196,31 @@ enum hitbox_color {
     SELLER,
     CAVE,
     DUNGEON,
-    PNJ
+    ARENA1,
+    ARENA2,
+    PNJ,
+    GATE
 };
+
+/**********\
+*   RAIN   *
+\**********/
+
+enum drop_value {
+    XTHIRD,
+    X_TWO_THIRD,
+    XSIXTH,
+    X_FIVE_SIXTH
+};
+
+/***************\
+*  FRAMEBUFFER  *
+\***************/
+
+enum frambuffer {
+    CUT,
+    RAIN,
+    DARK
+};
+
 #endif /* !ENUM_H_ */

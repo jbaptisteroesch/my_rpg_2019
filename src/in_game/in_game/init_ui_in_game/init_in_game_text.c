@@ -12,7 +12,7 @@ int init_in_game_text(game_t *game)
     sfVector2f position;
 
     position.x = 320;
-    position.y = 850;
+    position.y = 837;
 
     for (int i = 0; i < 5; ++i) {
         game->game_scenes[i].texts.string = sfText_create();

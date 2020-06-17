@@ -13,12 +13,11 @@ int init_tavern_pnj(game_t *game)
         return (1);
     game->game_scenes[TAVERN_MAP].pnj[PNJ_F] = create_element(
         game->game_scenes[TAVERN_MAP].pnj[PNJ_F],
-                "media/pnj/tavern_pnj.png", 1520, 671);
+        "media/pnj/tavern_pnj.png", 1520, 671);
     game->game_scenes[TAVERN_MAP].pnj[PNJ_S] = create_element(
         game->game_scenes[TAVERN_MAP].pnj[PNJ_S],
-                "media/pnj/w_tavern.png", 890, 144);
-    game->game_scenes[TAVERN_MAP].dialog = read_file("media/pnj/tavern_dialog");
-    if (game->game_scenes[TAVERN_MAP].dialog == NULL)
-        return (1);
+        "media/pnj/w_tavern.png", 890, 144);
+    game->game_scenes[TAVERN_MAP].dialog_state = 0;
+    game->game_scenes[TAVERN_MAP].dial_activated = false;
     return (0);
 }

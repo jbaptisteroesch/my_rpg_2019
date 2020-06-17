@@ -5,7 +5,7 @@
 ** settings menu
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int init_settings_menu(game_t *game)
 {

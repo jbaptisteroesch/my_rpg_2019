@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 elem_t create_element(elem_t element, char *element_name,
-                                                    float pos_x, float pos_y)
+    float pos_x, float pos_y)
 {
     element.texture = sfTexture_createFromFile(element_name, NULL);
     element.sprite = sfSprite_create();
@@ -18,5 +18,6 @@ elem_t create_element(elem_t element, char *element_name,
     sfSprite_setPosition(element.sprite, element.set_position);
     element.is_display = false;
     element.gen_action = false;
+    element.state = 0;
     return (element);
 }

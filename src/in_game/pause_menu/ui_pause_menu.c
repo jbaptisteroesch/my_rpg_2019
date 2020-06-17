@@ -16,7 +16,7 @@ int blk_pm(game_t *game)
         "media/pause_menu/seventy_op.png", 0, 0);
     color = sfColor_fromRGBA(0, 0, 0, 20);
     sfSprite_setColor(game->menu[PAUSE_MENU].ui_scene[PM_BLACK_BG].sprite,
-            color);
+        color);
     return (0);
 }
 

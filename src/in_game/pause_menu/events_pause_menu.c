@@ -81,9 +81,8 @@ int are_you_sure_pm(game_t *game, int wich_one)
 int events_pause_menu(game_t *game)
 {
     static int wich_one = 0;
-
     while (sfRenderWindow_pollEvent(game->window->window,
-                                                    &(game->window->event))) {
+        &(game->window->event))) {
         if (game->window->event.type == sfEvtClosed) {
             sfRenderWindow_close(game->window->window);
             game->game_state[PAUSE_MENU] = 0;
@@ -91,10 +90,10 @@ int events_pause_menu(game_t *game)
             game->game_is_up = 0;
         }
         if (game->window->event.type == sfEvtKeyReleased &&
-                                    game->window->event.key.code == sfKeyEscape)
+            game->window->event.key.code == sfKeyEscape)
             game->game_state[PAUSE_MENU] = 0;
         game->mouse_position =
-                        sfMouse_getPositionRenderWindow(game->window->window);
+            sfMouse_getPositionRenderWindow(game->window->window);
         if (!game->menu[PAUSE_MENU].ui_scene[PM_SURE_UI].is_display)
             wich_one = analyse_mouse_actions_pause_menu(game, wich_one);
         else

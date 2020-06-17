@@ -5,7 +5,7 @@
 ** events settings menu
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int modify_volume(game_t *game)
 {
@@ -41,7 +41,7 @@ int volume_selector(game_t *game)
     sfFloatRect rect;
 
     rect = sfSprite_getGlobalBounds(
-                game->menu[SETTINGS].ui_scene[SM_SELECTOR].sprite);
+        game->menu[SETTINGS].ui_scene[SM_SELECTOR].sprite);
     is_hover =
         sfFloatRect_contains(&(rect), MOUSEX, MOUSEY);
     if ((is_hover && MOUSE_CLICK)) {
@@ -75,14 +75,14 @@ int analyse_mouse_actions_settings(game_t *game)
 int events_settings_menu(game_t *game)
 {
     while (sfRenderWindow_pollEvent(game->window->window,
-                                                    &(game->window->event))) {
+        &(game->window->event))) {
         if (game->window->event.type == sfEvtClosed) {
             sfRenderWindow_close(game->window->window);
             game->game_state[SETTINGS] = 0;
             game->game_is_up = 0;
         }
         game->mouse_position =
-                        sfMouse_getPositionRenderWindow(game->window->window);
+            sfMouse_getPositionRenderWindow(game->window->window);
         analyse_mouse_actions_settings(game);
     }
     return (0);

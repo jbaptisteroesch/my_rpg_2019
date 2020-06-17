@@ -13,12 +13,11 @@ int init_seller_pnj(game_t *game)
         return (1);
     game->game_scenes[SELLER_MAP].pnj[PNJ_F] = create_element(
         game->game_scenes[SELLER_MAP].pnj[PNJ_F],
-                "media/pnj/seller_pnj.png", 1520, 671);
+        "media/pnj/seller_pnj.png", 1520, 671);
     game->game_scenes[SELLER_MAP].pnj[PNJ_S] = create_element(
         game->game_scenes[SELLER_MAP].pnj[PNJ_S],
-                "media/pnj/w_seller.png", 910, 370);
-    game->game_scenes[SELLER_MAP].dialog = read_file("media/pnj/seller_dialog");
-    if (game->game_scenes[SELLER_MAP].dialog == NULL)
-        return (1);
+        "media/pnj/w_seller.png", 910, 370);
+    game->game_scenes[SELLER_MAP].dialog_state = 0;
+    game->game_scenes[SELLER_MAP].dial_activated = false;
     return (0);
 }

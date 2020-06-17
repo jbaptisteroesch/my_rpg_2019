@@ -11,13 +11,13 @@ int create_buttons_main_menu(game_t *game)
 {
     game->menu[MAIN_MENU].buttons[MM_PLAY_HOV] = create_button(
         game->menu[MAIN_MENU].buttons[MM_PLAY_HOV],
-                        "media/main_menu/start_hov.png", 805, 327);
+        "media/main_menu/start_hov.png", 805, 327);
     game->menu[MAIN_MENU].buttons[MM_SETTINGS_HOV] = create_button(
         game->menu[MAIN_MENU].buttons[MM_SETTINGS_HOV],
-                        "media/main_menu/options_hov.png", 805, 493);
+        "media/main_menu/options_hov.png", 805, 493);
     game->menu[MAIN_MENU].buttons[MM_QUIT_HOV] = create_button(
         game->menu[MAIN_MENU].buttons[MM_QUIT_HOV],
-                        "media/main_menu/quit_hov.png", 805, 651);
+        "media/main_menu/quit_hov.png", 805, 651);
     return (0);
 }
 
@@ -30,11 +30,11 @@ int create_rectangle_mm(game_t *game, int num, int x, int y)
     game->menu[MAIN_MENU].rectangle[num].rect_size.y = 105.5;
     game->menu[MAIN_MENU].rectangle[num].rect = sfRectangleShape_create();
     sfRectangleShape_setSize(game->menu[MAIN_MENU].rectangle[num].rect,
-                        game->menu[MAIN_MENU].rectangle[num].rect_size);
+        game->menu[MAIN_MENU].rectangle[num].rect_size);
     sfRectangleShape_setFillColor(game->menu[MAIN_MENU].rectangle[num].rect,
-                        game->menu[MAIN_MENU].rectangle[num].color);
+        game->menu[MAIN_MENU].rectangle[num].color);
     sfRectangleShape_setPosition(game->menu[MAIN_MENU].rectangle[num].rect,
-                        game->menu[MAIN_MENU].rectangle[num].rect_position);
+        game->menu[MAIN_MENU].rectangle[num].rect_position);
     game->menu[MAIN_MENU].rectangle[num].is_hover = false;
     return (0);
 }

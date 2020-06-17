@@ -11,16 +11,16 @@ int create_pregame_buttons(game_t *game)
 {
     game->menu[PREGAME].buttons[BLOND_BOY] = create_button(
         game->menu[PREGAME].buttons[BLOND_BOY],
-                        "media/pregame/blond_boy.png", 715, 337);
+        "media/pregame/blond_boy.png", 715, 337);
     game->menu[PREGAME].buttons[BROWN_BOY] = create_button(
         game->menu[PREGAME].buttons[BROWN_BOY],
-                        "media/pregame/brown_boy.png", 1115, 590);
+        "media/pregame/brown_boy.png", 1115, 590);
     game->menu[PREGAME].buttons[BLOND_GIRL] = create_button(
         game->menu[PREGAME].buttons[BLOND_GIRL],
-                        "media/pregame/blond_girl.png", 715, 590);
+        "media/pregame/blond_girl.png", 715, 590);
     game->menu[PREGAME].buttons[BROWN_GIRL] = create_button(
         game->menu[PREGAME].buttons[BROWN_GIRL],
-                        "media/pregame/red_girl.png", 1115, 337);
+        "media/pregame/red_girl.png", 1115, 337);
     return (0);
 }
 
@@ -28,16 +28,16 @@ int create_pregame_buttons_hover(game_t *game)
 {
     game->menu[PREGAME].buttons[BLBOY_HOV] = create_button(
         game->menu[PREGAME].buttons[BLBOY_HOV],
-                        "media/pregame/blond_boy_smiling.png", 715, 337);
+        "media/pregame/blond_boy_smiling.png", 715, 337);
     game->menu[PREGAME].buttons[BRBOY_HOV] = create_button(
         game->menu[PREGAME].buttons[BRBOY_HOV],
-                        "media/pregame/brown_boy_smiling.png", 1115, 590);
+        "media/pregame/brown_boy_smiling.png", 1115, 590);
     game->menu[PREGAME].buttons[BLGIRL_HOV] = create_button(
         game->menu[PREGAME].buttons[BLGIRL_HOV],
-                        "media/pregame/blond_girl_smiling.png", 715, 590);
+        "media/pregame/blond_girl_smiling.png", 715, 590);
     game->menu[PREGAME].buttons[BRGIRL_HOV] = create_button(
         game->menu[PREGAME].buttons[BRGIRL_HOV],
-                        "media/pregame/red_girl_smiling.png", 1115, 337);
+        "media/pregame/red_girl_smiling.png", 1115, 337);
     return (0);
 }
 

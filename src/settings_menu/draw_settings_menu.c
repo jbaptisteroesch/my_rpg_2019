@@ -5,7 +5,7 @@
 ** draw settings menu
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int draw_settings_menu(game_t *game)
 {
@@ -15,12 +15,12 @@ int draw_settings_menu(game_t *game)
         drawSprite(WINDOW,
             game->menu[SETTINGS].ui_scene[SM_NOTCH].sprite, NULL);
     drawSprite(WINDOW,
-                    game->menu[SETTINGS].ui_scene[SM_SELECTOR].sprite, NULL);
+        game->menu[SETTINGS].ui_scene[SM_SELECTOR].sprite, NULL);
     if (game->menu[SETTINGS].buttons[SM_QUIT_HOV].is_hover == true)
         drawSprite(WINDOW,
-                    game->menu[SETTINGS].buttons[SM_QUIT_HOV].sprite, NULL);
+            game->menu[SETTINGS].buttons[SM_QUIT_HOV].sprite, NULL);
     if (game->menu[SETTINGS].buttons[SM_CONFIRM_HOV].is_hover == true)
         drawSprite(WINDOW,
-                    game->menu[SETTINGS].buttons[SM_CONFIRM_HOV].sprite, NULL);
+            game->menu[SETTINGS].buttons[SM_CONFIRM_HOV].sprite, NULL);
     return (0);
 }

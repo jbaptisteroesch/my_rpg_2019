@@ -5,10 +5,10 @@
 ** init button
 */
 
-#include "../../include/rpg.h"
+#include "rpg.h"
 
 int create_rectangle_gen_settings(game_t *game, int num, sfVector2i position,
-                                                            sfVector2i size)
+    sfVector2i size)
 {
     game->menu[SETTINGS].rectangle[num].rect_position.x = position.x;
     game->menu[SETTINGS].rectangle[num].rect_position.y = position.y;
@@ -17,13 +17,13 @@ int create_rectangle_gen_settings(game_t *game, int num, sfVector2i position,
     game->menu[SETTINGS].rectangle[num].rect_size.y = size.y;
     game->menu[SETTINGS].rectangle[num].rect = sfRectangleShape_create();
     sfRectangleShape_setSize(game->menu[SETTINGS].rectangle[num].rect,
-                        game->menu[SETTINGS].rectangle[num].rect_size);
+        game->menu[SETTINGS].rectangle[num].rect_size);
     sfRectangleShape_setFillColor(game->menu[SETTINGS].rectangle[num].rect,
-                        game->menu[SETTINGS].rectangle[num].color);
+        game->menu[SETTINGS].rectangle[num].color);
     sfRectangleShape_setPosition(game->menu[SETTINGS].rectangle[num].rect,
-                        game->menu[SETTINGS].rectangle[num].rect_position);
+        game->menu[SETTINGS].rectangle[num].rect_position);
     game->menu[SETTINGS].rectangle[num].is_hover = false;
-    return (1);
+    return (0);
 }
 
 int create_rectangle_settings_menu(game_t *game)

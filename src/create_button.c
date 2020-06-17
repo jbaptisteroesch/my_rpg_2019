@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 button_t create_button(button_t button, char *button_name,
-                                                    float pos_x, float pos_y)
+    float pos_x, float pos_y)
 {
     button.texture = sfTexture_createFromFile(button_name, NULL);
     button.sprite = sfSprite_create();

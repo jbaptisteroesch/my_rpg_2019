@@ -23,14 +23,14 @@ int analyse_mouse_actions_pregame(game_t *game)
 int events_pregame(game_t *game)
 {
     while (sfRenderWindow_pollEvent(game->window->window,
-                                                    &(game->window->event))) {
+        &(game->window->event))) {
         if (game->window->event.type == sfEvtClosed) {
             sfRenderWindow_close(game->window->window);
             game->game_state[PREGAME] = 0;
             game->game_is_up = 0;
         }
         game->mouse_position =
-                        sfMouse_getPositionRenderWindow(game->window->window);
+            sfMouse_getPositionRenderWindow(game->window->window);
         analyse_mouse_actions_pregame(game);
     }
     return (0);

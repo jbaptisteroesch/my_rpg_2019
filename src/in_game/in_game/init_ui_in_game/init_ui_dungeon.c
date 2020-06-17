@@ -13,6 +13,6 @@ int init_ui_dungeon(game_t *game)
         return (1);
     game->game_scenes[DUNGEON_MAP].ui_scene[MAP] = create_element(
         game->game_scenes[DUNGEON_MAP].ui_scene[MAP], "media/game/dungeon.png",
-                                                                200, -825);
+        200, -825);
     return (0);
 }
