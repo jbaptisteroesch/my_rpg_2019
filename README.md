@@ -6,5 +6,5 @@ Commandes :
 MY_RPG est un projet EPITECH.
 Le but est de recréer un jeu de type RPG dans sa totalité en utilisant la CSFML.
 
-Ce projet a été réaliser par GOLLING Florian, COHEN Jonathan, MUTH Clément et ROESCH Jean-Baptiste au cours de l'année 2019/2020.
+Ce projet a été réalisé par GOLLING Florian, COHEN Jonathan, MUTH Clément et ROESCH Jean-Baptiste au cours de l'année 2019/2020.
 
